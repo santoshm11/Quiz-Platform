@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Teams</title>
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD Logo">
+            <h4><sup>SMD organized</sup>  <span class="fest-name">InnerCollegeFest</span></h4>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Individual Dashboard</h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>Team ID</th>
+                    <th>Student Name</th>
+                </tr>
+            </thead>
+            <tbody id="teamList">
+                
+            </tbody>
+        </table>
+        <p>Made with 💖 by SMD Students</p>
+    </div>
+
+    <div id="teamCard" class="team-card hidden"></div>
+    <script src="{% static 'js/individual_dashboard.js' %}">        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Fest Registration</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="icon" href="{% static 'images/SMD_logo.jpeg' %}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD Logo">
+            <h4>
+                <sup>SMD organized</sup> 
+                <span class="fest-name">InnerCollegeFest</span>
+            </h4>            
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="img_">
+                <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD_logo" style="width: 70px; height: 70px;">
+            </div>
+            <h2>Participant Registration</h2>
+            <div class="messages">
+                    <p class="{{ message.tags }}"></p>
+            </div>
+            <form id="registrationForm" method="POST">    
+                {% csrf_token %}           
+                <!-- UUCMS ID Input -->
+                <div class="input-group visible">
+                    <label for="uucms_id">UUCMS ID</label>
+                    <input type="text" id="uucms_id" name="uucms_id" required>
+                    <span id="uucmsError" class="error"></span>
+                </div>
+
+                <!-- Name Input -->
+                <div class="input-group visible">
+                    <label for="name">Participant Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="nameError" class="error"></span>
+                </div>
+
+                <button type="submit" id="submitBtn">Register</button>
+            </form>
+        </div>
+    </main>    
+    <p style="font-weight: 1000; background-color: white; padding: 3px;">Made with ❤️ by SMD</p>
+    <script src="{% static 'js/register.js' %}"></script>
+</body>
+</html>

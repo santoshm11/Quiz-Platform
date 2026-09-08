@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{% static 'css/result_details.css' %}">
+</head>
+<body>
+    {{ answers|json_script:"results-data" }}
+    <div class="quiz-over-card" id="quizOverCard">
+        <h2>🎉 Quiz is Over! 🎉</h2>
+        <p>Hold tight, showing results...</p>
+        <div class="loader"></div>
+    </div>
+
+    <div class="container" id="resultSection" style="display: none;">
+        <h2 class="title"> 📊 Quiz Result Details</h2>
+
+        <div class="table-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>Question</th>
+                        <th>Correct Answer</th>
+                        <th>Selected Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JavaScript will insert rows here -->
+                </tbody>
+            </table>
+        </div><br>
+        <!-- Give the path-->
+        <a href="{% url 'result' %}" class="back-btn">⬅ Back to Quiz</a>
+    </div>
+
+    <script src="{% static 'js/result_details.js' %}"></script>
+</body>
+</html>

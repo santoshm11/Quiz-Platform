@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD Logo">
+            <h4><sup>SMD organized</sup>  <span class="fest-name">InnerCollegeFest</span></h4>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <hr>
+        <button class="start_quiz" id="startQuizBtn" >Start Quiz</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>UUCMS ID</th>
+                    <th>Student Name</th>
+                    <th>Log-in</th>
+                </tr>
+            </thead>
+            <tbody id="teamList">
+                <!-- Data will be inserted dynamically -->
+            </tbody>
+        </table>
+        <p>Made with 💖 by SMD students</p>
+    </div>
+
+    <div id="teamCard" class="team-card hidden"></div>
+    <script src="{% static 'js/admin_dashboard.js' %}"></script>
+</body>
+</html>

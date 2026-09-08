@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Questions</title>
+    <link rel="stylesheet" href="{% static 'css/countdown.css' %}">
+</head>
+<body>
+    <div class="countdown-container">
+        <h2>Next Question in</h2>
+        <div id="countdown">5</div>
+    </div>
+    <script>
+        let timeLeft = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.innerText = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = '/quiz/';  // Redirect to quiz
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

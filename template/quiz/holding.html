@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Processing...</title>
+    <link rel="stylesheet" href="{% static 'css/holding.css' %}">
+    <script>
+        const likeGif = "{% static 'images/like.gif' %}"; 
+    </script>
+</head>
+<body>
+    <div class="holding-container">
+        <h2>Processing your answer...</h2>
+        <div id="animationDiv" class="thumb-animation"></div>
+    </div>
+    <script src="{% static 'js/holding.js' %}"></script>
+</body>
+</html>

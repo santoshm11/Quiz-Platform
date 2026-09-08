@@ -1,0 +1,123 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(to right, #000428, #004e92); 
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/bg_1.jpg');
+}
+
+h2.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+.quiz-over-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    display: none;
+}
+
+
+.table-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; 
+    max-width: 1400px; 
+    background: rgba(0, 0, 0, 0.253);
+    padding: 30px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+th, td {
+    padding: 18px; 
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+.section-row {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.green-row {
+    background-color: #6df06d; 
+    color: #000;
+}
+
+.red-row {
+    background-color: #f44949f8;  
+    color: #000;
+}
+
+.yellow-row {
+    background-color: #f7d24e;
+    color: #000;
+}
+
+
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .table-container {
+        padding: 20px;
+    }
+}

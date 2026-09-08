@@ -1,0 +1,6 @@
+channels
+django
+faker
+models
+netifaces
+pandas

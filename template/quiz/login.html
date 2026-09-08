@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Fest Registration</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="icon" href="{% static 'images/SMD_logo.jpeg' %}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD Logo">
+            <h4><sup style="font-size: 17px;"><b>SMD organized </b></sup><span class="fest-name">InnerCollegeFest</span></h4>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="container_2">
+        <h2>Team Login</h2> <br>
+        <form action="{% url 'individual_login' %}" method="POST">
+            {% csrf_token %}
+            <img src="{% static 'images/SMD_logo.jpeg' %}" alt="SMD_logo" style="width: 70px; height: 70px;"> 
+            <label for=""> UUCMS Id: </label>
+            <input type="text" name="uucms_id" required>
+            <br><br>
+
+            <label>Password:</label>
+            <input type="password" name="password" required>
+            <br><br>
+            
+            <button class="button" type="submit">Login</button>
+        </form>
+        <br>
+        <p><a href="{% url 'reset_password' %}">Forgot Password?</a></p>
+    </div>
+</body>
+</html>

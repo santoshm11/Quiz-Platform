@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{% static 'css/result.css'%}">
+</head>
+<body>
+
+    <div class="quiz-over-card" id="quizOverCard">
+        <h2>🎉 Quiz is Over! 🎉</h2>
+        <p>Hold tight, calculating results...</p>
+        <div class="loader"></div>
+    </div>
+
+    <div class="container" id="resultSection">
+        <h2 class="title">📊 Quiz Results</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Student</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Results will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <button class="view-graph-btn" id="viewGraphBtn">📈 View Graph</button>
+
+        <!--<div class="graph-container" id="graphContainer">
+            <img src="quiz_results.png" alt="Quiz Score Graph" id="graphImage">
+        </div>-->
+        
+    </div>
+
+    <script src="{% static 'js/result.js' %}"></script>
+</body>
+</html>
